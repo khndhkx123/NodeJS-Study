@@ -25,3 +25,12 @@ sudo npm install --save mysql2
 ```bash
 node src/App.js
 ```
+6. Install Nodemon (Change script inside package.json) :
+```bash
+sudo npm install --g nodemon
+"dev": "nodemon src/App.js"
+```
+7. Run with Nodemon :
+```bash
+npm run dev
+```

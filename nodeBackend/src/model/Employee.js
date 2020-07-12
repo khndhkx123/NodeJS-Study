@@ -23,7 +23,7 @@ var Employee = sequelize.define(nametable, {
             key: 'id'
         }
     }
-});
+})
 
 Employee.belongsTo(Role);
 

@@ -3,9 +3,10 @@ var Sequelize = require('sequelize');
 const sequelize = new Sequelize(
     'node', // Database
     'root', // User
-    'root', // Password
+    'kioni', // Password
     {
-        host: 'localhost:3306',
+        host: 'localhost',
+        port: 1118,
         dialect: 'mysql'
     }
 );

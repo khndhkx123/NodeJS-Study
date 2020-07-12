@@ -6,6 +6,7 @@ var Employee = require('../model/Employee');
 var Role = require('../model/Role');
 
 controllers.testdata = async (req, res) => {
+
     const response = await sequelize.sync().then(function(){
 
         // Create Role
@@ -23,7 +24,7 @@ controllers.testdata = async (req, res) => {
         });
         
         // Get all employee data
-        const data = Employee.findAll
+        const data = Employee.findAll();
         return data;
     })
     .catch(error => {

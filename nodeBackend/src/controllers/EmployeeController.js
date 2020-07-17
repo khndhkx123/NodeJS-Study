@@ -23,6 +23,36 @@ controllers.list = async(req,res) => {
 
 }
 
+controllers.create = async (req,res) => {
+
+    // Data parameters from post
+    const{name, email, address, phone, role} = req.body;
+
+    //Create
+    const data = await Employee.create({
+        name:name,
+        email:email,
+        address:address,
+        phone:phone,
+        roleId:role
+    })
+    .then(function(data){
+        return data;
+    })
+    .catch(error=>{
+        console.log(error)
+        return error;
+    })
+
+    //return res
+    res.status(200).json({
+        success:true,
+        message:"Return res success.",
+        data:data
+    })
+
+}
+
 // controllers.testdata = async (req, res) => {
 
 //     const response = await sequelize.sync().then(function(){

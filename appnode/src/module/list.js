@@ -4,6 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
 
+import{Link} from "react-router-dom";
+
+const baseUrl =  "http://localhost:3000";
+
 class listComponent extends React.Component  {
 
   constructor(props){
@@ -15,7 +19,7 @@ class listComponent extends React.Component  {
 
   componentDidMount(){
 
-    const url = "http://localhost:3000/employee/list"
+    const url = baseUrl+"/employee/list";
     axios.get(url)
     .then(res =>{
       if(res.data.success){
@@ -79,7 +83,7 @@ class listComponent extends React.Component  {
             <td>{data.address}</td>
             <td>{data.phone}</td>
             <td>
-              <button class="btn btn-outline-info "> Edit </button>
+              <Link class="btn btn-outline-info" to={"/edit/"+data.id}>Edit</Link>
             </td>
             <td>
               <button class="btn btn-outline-danger "> Delete </button>

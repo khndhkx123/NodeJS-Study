@@ -7,6 +7,25 @@ var Role = require('../model/Role');
 
 sequelize.sync()
 
+controllers.get = async (req, res) => {
+
+    const {id} = req.params;
+
+    const data = await Employee.findAll({
+        where: {id: id},
+        include: [Role]
+    })
+    .then(function(data){
+        return data;
+    })
+    .catch(error => {
+        return error;
+    })
+
+    res.json({success:true,data:data});
+
+}
+
 controllers.list = async(req,res) => {
 
     const data = await Employee.findAll({
@@ -70,7 +89,7 @@ controllers.create = async (req,res) => {
 //             phone: '01086267026',
 //             roleId: 1
 //         });
-        
+
 //         // Get all employee data
 //         const data = Employee.findAll();
 //         return data;

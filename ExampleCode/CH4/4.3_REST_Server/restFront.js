@@ -1,7 +1,7 @@
-function getUser() { // 로딩 시 사용자가 가져오는 함수
+function getUser() { // 로딩 시 사용자 가져오는 함수
     var xhr = new XMLHttpRequest();
-    xhr.onload = function() {
-        if(xhr.status === 200) {
+    xhr.onload = function () {
+        if (xhr.status === 200) {
             var users = JSON.parse(xhr.responseText);
             var list = document.getElementById('list');
             list.innerHTML = '';
@@ -13,12 +13,12 @@ function getUser() { // 로딩 시 사용자가 가져오는 함수
                 edit.textContent = '수정';
                 edit.addEventListener('click', function () { // 수정 버튼 클릭
                     var name = prompt('바꿀 이름을 입력하세요');
-                    if(!name){
+                    if (!name) {
                         return alert('이름을 반드시 입력하셔야 합니다');
                     }
                     var xhr = new XMLHttpRequest();
                     xhr.onload = function () {
-                        if(xhr.status === 200){
+                        if (xhr.status === 200) {
                             console.log(xhr.responseText);
                             getUser();
                         } else {
@@ -34,7 +34,7 @@ function getUser() { // 로딩 시 사용자가 가져오는 함수
                 remove.addEventListener('click', function () { // 삭제 버튼 클릭
                     var xhr = new XMLHttpRequest();
                     xhr.onload = function () {
-                        if(xhr.status === 200) {
+                        if (xhr.status === 200) {
                             console.log(xhr.responseText);
                             getUser();
                         } else {
@@ -56,17 +56,17 @@ function getUser() { // 로딩 시 사용자가 가져오는 함수
     xhr.open('GET', '/users');
     xhr.send();
 }
-window.onload = getUser(); // 로딩시 getUser 호출
-
+window.onload = getUser; // 로딩 시 getUser 호출
+// 폼 제출
 document.getElementById('form').addEventListener('submit', function (e) {
     e.preventDefault();
     var name = e.target.username.value;
-    if(!name){
+    if (!name) {
         return alert('이름을 입력하세요');
     }
     var xhr = new XMLHttpRequest();
     xhr.onload = function () {
-        if(xhr.status === 201){
+        if (xhr.status === 201) {
             console.log(xhr.responseText);
             getUser();
         } else {

@@ -7,7 +7,6 @@ Study project for learning Node.js
 ---
 ### Main Project :  
 - [REST API 를 이용한 이름 등록 웹 서버](https://github.com/khndhkx123/NodeJS-Study/tree/master/ExampleCode/CH4/4.3_REST_Server)
-- [Express 프레임 워크를 이용한 기본 서버](https://github.com/khndhkx123/NodeJS-Study/tree/master/ExampleCode/CH6/learn-express)
 - [Express, Sequelize, MySQL 를 이용한 CRUD 게시판](https://github.com/khndhkx123/NodeJS-Study/tree/master/ExampleCode/CH7/learn-sequlize)
 - [Express 로 만든 SNS 서비스](https://github.com/khndhkx123/NodeJS-Study/tree/master/ExampleCode/CH9/nodebird)
 ---

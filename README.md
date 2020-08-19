@@ -9,7 +9,7 @@ Study project for learning Node.js
 - [REST API 를 이용한 이름 등록 웹 서버](https://github.com/khndhkx123/NodeJS-Study/tree/master/ExampleCode/CH4/4.3_REST_Server)
 - [Express, Sequelize, MySQL 를 이용한 CRUD 게시판](https://github.com/khndhkx123/NodeJS-Study/tree/master/ExampleCode/CH7/learn-sequlize)
 - [Express 로 만든 SNS 서비스](https://github.com/khndhkx123/NodeJS-Study/tree/master/ExampleCode/CH9/nodebird)
-- [웹 API서버](https://github.com/khndhkx123/NodeJS-Study/tree/master/ExampleCode/CH10)
+- [JWT를 이용한 웹 API서버](https://github.com/khndhkx123/NodeJS-Study/tree/master/ExampleCode/CH10)
 ---
 ### 공부한 내용을 간단히 정리한 wiki (기록용) :
 - [1장 : 노드 시작하기](https://github.com/khndhkx123/NodeJS-Study/wiki/1.-%EB%85%B8%EB%93%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0)
